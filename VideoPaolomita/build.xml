@@ -4,5 +4,6 @@
 <!-- If you delete this file and reopen the project it will be recreated. -->
 <project name="VideoPaolomita" basedir=".">
     <description>Builds the module suite VideoPaolomita.</description>
+    
     <import file="nbproject/build-impl.xml"/>
 </project>
