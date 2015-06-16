@@ -2,8 +2,8 @@
 	session_start();
     $ip =  "localhost";
     $user = "admin";
-    $password = "password";
-    $db = "videoPalomita";
+    $password = "";
+    $db = "video_palomita";
     $mysqli = new mysqli();
     $mysqli->connect($ip, $user, $password, $db);
     

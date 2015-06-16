@@ -25,7 +25,7 @@
 			<br>
 			<label>
 				Fecha de Nacimiento
-				<input type="date" name="dataNascita" title="Inserta tu fecha de nacimiento" required>
+				<input type="date" name="fechaNacimiento" title="Inserta tu fecha de nacimiento" required>
 			</label>
 
 			<label>
@@ -51,7 +51,7 @@
 			<br>
 			<label>
 				Codigo Postal
-				<input type="text" name="cap" placeholder="Codigo Postal" pattern="^[0-9]{5}" maxlength='5' title="El Codigo Postal esta formado desde 5 digitos" required> <!-- Il pattern vuole solo 5 numeri -->
+				<input type="text" name="codigoPostal" placeholder="Codigo Postal" pattern="^[0-9]{5}" maxlength='5' title="El Codigo Postal esta formado desde 5 digitos" required> <!-- Il pattern vuole solo 5 numeri -->
 			</label>	
 						
 			<label> 
