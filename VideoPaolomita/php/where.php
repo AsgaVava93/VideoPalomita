@@ -6,7 +6,7 @@
 	</div>
 	
 	<div class='location'><!--location-->
-		<p>Università di León<br>Av. Facultad de Veterinaria, 25<br>24004 León<br>España</p>
+		<p>Universidad de León<br>Av. Facultad de Veterinaria, 25<br>24004 León<br>Espa&#241a</p>
 	</div>
 	
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.239754010202!2d-5.561684000000027!3d42.61387100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDM2JzQ5LjkiTiA1wrAzMyc0Mi4xIlc!5e0!3m2!1sit!2sit!4v1434157644273" width="600" height="450" frameborder="0" style="border:0"></iframe>
