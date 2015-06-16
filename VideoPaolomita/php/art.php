@@ -11,32 +11,29 @@
 	}
 	else{
             
-		$query = "SELECT * FROM computer WHERE code='$art'";
+		$query = "SELECT * FROM pelicula WHERE code='$art'";
 		$result = $mysqli->query($query);
 		
 		$row = $result->fetch_row();
 		
-		$var = new Computer ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13]);
+		$var = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
 		$aux = 'pc';
 	}      
 ?>
 	<div class="row"> <!-- Usata per nome articolo o titolo pagina -->
-		<h1><?php echo "{$var->getMarca()} {$var->getModelo()}"; ?></h1>
+		<h1><?php echo "{$var->getTitulo()} {$var->getDirector()}"; ?></h1>
 	</div>
 				
 	<div> <!-- foto e info principali -->
 		<div class="photo-article"> <!-- foto dell'articolo -->
-			<img class="img-art" src="<?php echo"{$var->getPhoto()}" ?>" alt="<?php echo "{$var->getMarca()} {$var->getModelo()}"; ?>">
+			<img class="img-art" src="<?php echo"{$var->getFoto()}" ?>" alt="<?php echo "{$var->getTitulo()} {$var->getDirector()}"; ?>">
 		</div><!--
 					
-		--><div class="description-article"> <!-- Prezzo, cod articolo, marca, disponibilità -->
-			<h2> <?php echo "{$var->getPrice()}"; ?> &#8364; </h2>
+		--><div class="description-article"> <!-- Prezzo, cod articolo, marca, disponibilitï¿½ -->
+			<h2> <?php echo "{$var->getPrecio()}"; ?> &#8364; </h2>
 			<p><?php echo"Cod. articulo {$var->getCode()}" ?></p>
 			<?php	
-				if ($var->getNum() > 0)
-		    		echo "<p><font color='#99f614'><nobr>DISPONIBILE</nobr></font></p>";
-		    	else
-		    		echo "<p><font color='#ff3636'><nobr>NON DISPONIBILE</nobr></font></p>"; 
+				
 			?>	
 		</div><!--
 		
@@ -49,9 +46,9 @@
 				else{ 
 					?><a href='?page=err&code=1'><?php
 				}
-				?> <img class='cart-art-image' src='assets/images/cart.jpg' alt='Añades al carro'></a> <?php
+				?> <img class='cart-art-image' src='assets/images/cart.jpg' alt='Aï¿½ades al carro'></a> <?php
 			} else {
-				?><img class='cart-art-image' src='assets/images/cart.jpg' alt='Añades al carro'><?php
+				?><img class='cart-art-image' src='assets/images/cart.jpg' alt='Aï¿½ades al carro'><?php
 			} ?>
 		</div>
 	</div><!--
@@ -64,8 +61,8 @@
 		<?php
 			if($sc == 'mon'){ //visualizzo gli articoli con le caratteristiche dei monitor ?>
 					<!--
-						<b>Marca</b><div class='art-c'><?php// echo "{$var->getMarca()}" ?></div><br>
-						<b>Modelo</b><div class='art-c'><?php //echo "{$var->getModelo()}" ?></div><br>
+						<b>Titulo</b><div class='art-c'><?php// echo "{$var->getTitulo()}" ?></div><br>
+						<b>Director</b><div class='art-c'><?php //echo "{$var->getDirector()}" ?></div><br>
 						<b>Risoluzione</b><div class='art-c'><?php //echo "{$var->getRisoluzione()}" ?></div><br>
 						<b>Formato</b><div class='art-c'><?php //echo "{$var->getFormato()}" ?></div><br>
 						<b>3D</b><div class='art-c'><?php //echo "{$var->getTreD()}" ?></div><br>
@@ -74,12 +71,12 @@
 					<table class="art-tab">
 						<tbody>
 							<tr>
-								<td><b>Marca</b></td>
-								<td class='lf'><?php echo "{$var->getMarca()}" ?></td>
+								<td><b>Titulo</b></td>
+								<td class='lf'><?php echo "{$var->getTitulo()}" ?></td>
 							</tr>
 							<tr>
-								<td><b>Modelo</b></td>
-								<td class='lf'><?php echo "{$var->getModelo()}" ?></td>
+								<td><b>Director</b></td>
+								<td class='lf'><?php echo "{$var->getDirector()}" ?></td>
 							</tr>
 							<tr> //CAMBIAR RESPECTO DATABASE - vale
 								<td><b>Pollici</b></td>
@@ -105,16 +102,16 @@
 					</table>
 					
 	<?php }
-		else { 	    	  //caratteristiche computer ?>
+		else { 	    	  //caratteristiche pelicula ?>
 				<table class="art-tab">
 					<tbody>
 						<tr>
-							<td><b>Marca</b></td>
-							<td class='lf'><?php echo "{$var->getMarca()}" ?></td>
+							<td><b>Titulo</b></td>
+							<td class='lf'><?php echo "{$var->getTitulo()}" ?></td>
 						</tr>
 						<tr>
-							<td><b>Modelo</b></td>
-							<td class='lf'><?php echo "{$var->getModelo()}" ?></td>
+							<td><b>Director</b></td>
+							<td class='lf'><?php echo "{$var->getDirector()}" ?></td>
 						</tr>
 						<tr>
 							<td><b>Sistema Operativo</b></td>
