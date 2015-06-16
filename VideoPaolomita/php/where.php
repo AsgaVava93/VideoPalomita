@@ -24,6 +24,6 @@
 		--><div class='contactos'>
 			<p class='left'><b>Rosario Cruz</b><br>Calle Felipe II, 8<br>24007 - Leon (ES)<br>Tel.: 749/1041651<br><a href='mailto:rcruze00@estudiantes.unileon.es'>rcruze00@estudiantes.unileon.es</a></p>
 			<img src='assets/images/contacts/rosario.jpg' alt='Federico Ibba'>
-	</div><!--
-        --></div>
+	</div>
+       </div>
 </section>
