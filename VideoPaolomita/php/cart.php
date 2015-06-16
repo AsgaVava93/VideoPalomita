@@ -138,7 +138,7 @@ else {
 			 			
 		
 			if($nopeli)
-				echo "Il carrello &egrave; vuoto.<br><br>";
+				echo " el carro esta vacio<br><br>";
 		
 	
 		if(!$nopeli){ ?>
@@ -147,7 +147,7 @@ else {
 
 			<form class='move-left' action='#' method='POST'>
 				<label class='money-input'>
-					Inserisci i tuoi soldi <input type='number' step='any' name='money' placeholder='<?php echo "{$total}"; ?>' value='<?php echo "{$total}"; ?>'>
+					Inserta tu sueldo <input type='number' step='any' name='money' placeholder='<?php echo "{$total}"; ?>' value='<?php echo "{$total}"; ?>'>
 				</label>
 				<input id='bottone' class='reg-btn acq-btn' type="submit" name="compra" value="Adelante con la compra">
 				<?php $_SESSION['total'] = $total; ?>
