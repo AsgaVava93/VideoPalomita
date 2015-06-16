@@ -4,6 +4,9 @@
 	$code = $_GET['code'];  		// codice articolo
 	$userid = $_SESSION['userid'];  // user id
 	
+        echo $code;
+        echo $sc;
+        echo $userid;
 //	if($type == 'pc'){
 		if($sc == 'add'){
 			// Non bisogna far mettere nel carrello pi� articoli di quelli realmente disponibili
