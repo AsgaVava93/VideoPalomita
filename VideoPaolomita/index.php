@@ -47,7 +47,7 @@
 	<!-- HEADER -->
 	<?php include('view/header.php'); ?>
 	
-<!--	 PAGE 
+<!--	 PAGE -->
 	<div class="group">
 		<?php include('view/aside.php'); ?>
 		<section class="primary-section">
@@ -55,7 +55,7 @@
 				include('php/switch.php');
 			?>
 		</section>
-	</div>-->
+	</div>
 
 
 	<!-- FOOTER -->
