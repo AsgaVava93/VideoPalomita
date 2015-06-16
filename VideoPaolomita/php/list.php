@@ -3,14 +3,39 @@
 //	include('php/Pelicula.php');
         
 	$list = array();
-        		
-	
-	$query = "SELECT * FROM pelicula";
-	$result = $mysqli->query($query);
         
-	while($row = $result->fetch_row())
-            $list[] = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
-		
+        switch($sc){
+                case 'peliculas':
+			$query = "SELECT * FROM pelicula";
+			$result = $mysqli->query($query);     
+			$type = 'peliculas';
+                        while($row = $result->fetch_row())
+                        $list[] = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
+                        break;
+		case 'nuevas': 
+			$query = "SELECT * FROM pelicula WHERE anio>2010";
+			$result = $mysqli->query($query);     
+			$type = 'nuevas';
+                        while($row = $result->fetch_row())
+                        $list[] = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
+                        break;
+		case 'actores': 
+			$query = "SELECT * FROM personaje WHERE es_actor = 1";
+			$result = $mysqli->query($query);     
+			$type = 'actores';
+                        while($row = $result->fetch_row())
+                        $list[] = new Personaje ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12]);
+                        break;
+		case 'directores': 
+			$query = "SELECT * FROM personaje WHERE es_director = 1";
+			$result = $mysqli->query($query);     
+			$type = 'directores';
+                        while($row = $result->fetch_row())
+                        $list[] = new Personaje ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12]);
+                        break;
+                        
+        }	
+
 	$i=0;
 	while($i < count($list)){
 		        

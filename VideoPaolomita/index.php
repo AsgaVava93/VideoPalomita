@@ -4,6 +4,7 @@
     
 	include('php/config.php');
 	include('php/Pelicula.php');
+	include('php/Personaje.php');
 	include('php/Usuario.php');
 
 	if(isset($_GET['page'])){
