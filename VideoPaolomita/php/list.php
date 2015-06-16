@@ -45,7 +45,7 @@ while ($i < count($list)) {
     <?php if ($type == 'peliculas' || $type == 'nuevas') { ?>
         <div class='box-article box-art-w'>
             <div class='box-image-article'>
-                <img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getTitulo()} {$list[$i]->getDirector()}"; ?>'>
+                <img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getTitulo()}"; ?>'>
             </div><!--
         1		--><div class='name-article'>
                 <h3><nobr><a class='art-link' href='index.php?page=list&sc=<?php echo"{$sc}"; ?>&art=<?php echo"{$list[$i]->getCode()}"; ?>' alt='<?php echo "{$list[$i]->getTitulo()} {$list[$i]->getDirector()}"; ?>'><?php echo "{$list[$i]->getTitulo()} {$list[$i]->getDirector()}"; ?></a></nobr></h3> <!-- marca e modelos-->

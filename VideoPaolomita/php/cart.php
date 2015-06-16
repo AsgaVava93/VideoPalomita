@@ -24,32 +24,17 @@ if (isset($_POST['compra'])) {
         $i = 0;
 
         while ($i < count($listID)) {
-            // $numDisp contiene quanti pelicula di codice $listID[$i] ci sono ancora disponibili
-//			$query = "SELECT num FROM pelicula WHERE pelicula.code = $listID[$i]";
-//			$resNum = $mysqli->query($query);
-//			$aux = $resNum->fetch_row();
-//			$numDisp = $aux[0];
-            // $numCart contiene quanti pelicula si vogliono acquistare (presenti nel carrello)
             $query = "SELECT COUNT(id_pelicula) FROM cart WHERE cart.id_usuario ='$userid'";
             $resNum = $mysqli->query($query);
             $aux = $resNum->fetch_row();
             $numCart = $aux[0];
 
-            //echo "Tizio vuole acquistare $numCart PC e in magazzeno ce ne sono attualmente $numDisp<br>";
 
             $query = "DELETE FROM cart WHERE id_pelicula = $listID[$i] AND id_usuario = $userid";
             //echo "i = $i<br>";
             if (!($mysqli->query($query))) {
                 echo "Errore nella query pc";
             }
-
-//			$toDel = $numDisp - $numCart;
-//			$query = "UPDATE pelicula SET num = $toDel WHERE code = $listID[$i]";
-            //echo "Il numero dei pc deve diventare $toDel<br>";
-            //echo "$query<br>";
-//			if(!($mysqli->query($query))){
-//				echo "Errore nella query todel<br>";
-//			}
 
             $i++;
         }

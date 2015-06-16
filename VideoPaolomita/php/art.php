@@ -8,12 +8,12 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
     $var = new Pelicula($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
     $aux = 'peliculas';
     ?>        <div class="row"> 
-        <h1><?php echo "{$var->getTitulo()} {$var->getDirector()}"; ?></h1>
+        <h1><?php echo "{$var->getTitulo()}"; ?></h1>
     </div>
 
     <div> <!-- foto e info principali -->
         <div class="photo-article"> <!-- foto dell'articolo -->
-            <img class="img-art" src="<?php echo"{$var->getFoto()}" ?>" alt="<?php echo "{$var->getTitulo()} {$var->getDirector()}"; ?>">
+            <img class="img-art" src="<?php echo"{$var->getFoto()}" ?>" alt="<?php echo "{$var->getTitulo()}"; ?>">
         </div><!--
                                 
         --><div class="description-article"> <!-- Prezzo, cod articolo, marca, disponibilit� -->
@@ -24,59 +24,14 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
         </div><!--
         
         --><div class="cart-article"><!-- contenitore immagine carrello -->
-    <?php ?>
+    
         </div>
     </div><!--
 
     --><div class='row bott'>
     <?php echo "{$var->getSinopsis()}" ?>
-    </div><!--
-    --><div class='table-caratt'>
-        <div>	
-    <?php if ($sc == 'mon') { //visualizzo gli articoli con le caratteristiche dei monitor  ?>
-                <!--
-                        <b>Titulo</b><div class='art-c'><?php // echo "{$var->getTitulo()}"  ?></div><br>
-                        <b>Director</b><div class='art-c'><?php //echo "{$var->getDirector()}" ?></div><br>
-                        <b>Risoluzione</b><div class='art-c'><?php //echo "{$var->getRisoluzione()}" ?></div><br>
-                        <b>Formato</b><div class='art-c'><?php //echo "{$var->getFormato()}"  ?></div><br>
-                        <b>3D</b><div class='art-c'><?php //echo "{$var->getTreD()}"  ?></div><br>
-                        <b>Altoparlanti</b><div class='art-c'><?php // echo "{$var->getAltoparlanti()}"  ?></div><br>
-                -->
-                <table class="art-tab">
-                    <tbody>
-                        <tr>
-                            <td><b>Titulo</b></td>
-                            <td class='lf'><?php echo "{$var->getTitulo()}" ?></td>
-                        </tr>
-                        <tr>
-                            <td><b>Director</b></td>
-                            <td class='lf'><?php echo "{$var->getDirector()}" ?></td>
-                        </tr>
-                        <tr> 
-                            <td><b>Pollici</b></td>
-                            <td class='lf'><?php echo "{$var->getPollici()}''" ?></td>
-                        </tr>							
-                        <tr>
-                            <td><b>Risoluzione</b></td>
-                            <td class='lf'><?php echo "{$var->getRisoluzione()}" ?></td>
-                        </tr>
-                        <tr>
-                            <td><b>Formato</b></td>
-                            <td class='lf'><?php echo "{$var->getFormato()}" ?></td>
-                        </tr>
-                        <tr>
-                            <td><b>3D</b></td>
-                            <td class='lf'><?php echo "{$var->getTreD()}" ?></td>
-                        </tr>
-                        <tr>
-                            <td><b>Altoparlanti</b></td>
-                            <td class='lf'><?php echo "{$var->getAltoparlanti()}" ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-    <?php } else {         //caratteristiche pelicula 
-        ?>
+           <div>	
+    
                 <table class="art-tab">
                     <tbody>
                         <tr>
@@ -111,64 +66,14 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
                             <td><b>Precio</b></td>
                             <td class='lf'><?php echo "{$var->getPrecio()}" ?></td>
                         </tr>
-                        <tr>
-                            <td><b>Foto</b></td>
-
-                        </tr>
-                    <img class='image-article' src='<?php echo "{$var->getFoto()}"; ?>' alt='art1'>
-
-                    <img class= 'image-article' src='<?php echo "{$var->getFoto()}"; ?>' >
-                    =======
-                    else { 	    	  //caratteristiche pelicula ?>
-                    <table class="art-tab">
-                        <tbody>
-                            <tr>
-                                <td><b>Titulo</b></td>
-                                <td class='lf'><?php echo "{$var->getTitulo()}" ?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Director</b></td>
-                                <td class='lf'><?php echo "{$var->getDirector()}" ?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Actores</b></td>
-                                <td class='lf'><?php echo "{$var->getActores()}" ?></td>
-                            </tr>	
-                            <tr>
-                                <td><b>duracion</b></td>
-                                <td class='lf'><?php echo "{$var->getDuracion()}" ?></td>
-                            </tr>	
-                            <tr>
-                                <td><b>Año</b></td>
-                                <td class='lf'><?php echo "{$var->getAnio()}" ?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Genero</b></td>
-                                <td class='lf'><?php echo "{$var->getGenero()}" ?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Protagonista</b></td>
-                                <td class='lf'><?php echo "{$var->getProtagonista()}" ?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Precio</b></td>
-                                <td class='lf'><?php echo "{$var->getPrecio()}" ?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Foto</b></td>
-
-
-                            </tr>
-
-
-                        </tbody>
-                    </table>
+                </table>
+                    </div>
+                    </div>
+                   
     <?php
-    }
+    
     $mysqli->close();
-    ?>
-        </div>
-    </div><?php
+    ?><?php
             } else {
                 $query = "SELECT * FROM personaje WHERE code='$art'";
                 $result = $mysqli->query($query);
@@ -184,21 +89,24 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
         <div class="photo-article"> <!-- foto dell'articolo -->
             <img class="img-art" src="<?php echo"{$var->getFoto()}" ?>" alt="<?php echo "{$var->getNobre()} {$var->getApellido()}"; ?>">
         </div>
+    </div>
+    
+    
+    <div>
 
         <div class='table-caratt'>
-            <div>	
 
                 <table class="art-tab">
                     <tbody>
                         <tr>
                             <td><b>Lugar y Fecha de Nacimiento</b></td>
-                            <td class='lf'><?php echo "{$var->getLugarNacimiento()}" ?></td>, 
-                            <td class='lf'><?php echo "{$var->getFechaNacimiento()}" ?></td>
+                            <td><?php echo "{$var->getLugarNacimiento()}" ?></td>, 
+                            <td><?php echo "{$var->getFechaNacimiento()}" ?></td>
                         </tr>
                         <tr>
                             <td><b>Lugar y Fecha de Muerte</b></td>
-                            <td class='lf'><?php echo "{$var->getLugarMuerte()}" ?></td>, 
-                            <td class='lf'><?php echo "{$var->getFechaMuerte()}" ?></td>
+                            <td><?php echo "{$var->getLugarMuerte()}" ?></td>, 
+                            <td><?php echo "{$var->getFechaMuerte()}" ?></td>
                         </tr>
                         <tr>
                             <td><b>Biografia</b></td>
@@ -233,9 +141,9 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
 
                     </tbody>
                 </table>
+            </div>
+            </div>
     <?php
     $mysqli->close();
     ?>
-            </div>
-        </div>
             <?php } ?>
