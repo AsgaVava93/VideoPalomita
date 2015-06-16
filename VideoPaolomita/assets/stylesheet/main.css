@@ -107,7 +107,7 @@ table {
 
 
 body {
-	background: #008080;
+	background: #ce2c2c;
 	font: 300 16px/22px "Raleway", "Georgia", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -159,7 +159,7 @@ cite, em {
 /* HEADER */
 
 .primary-header {
-	background: #DF3013;
+	background: #47ba18;
 	width: 100%;
 	height: 128px;
 	padding-left: 15px;
@@ -181,7 +181,7 @@ cite, em {
 }
 
 .header-nav a:hover{
-	background: #008080;
+	background: #ce2c2c;
 	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 }
 
@@ -282,7 +282,7 @@ li {
 
 .box-article{
 	height: 120px;
-	border: 2px solid #DF3013;
+	border: 2px solid #47ba18;
 	border-radius: 5px;
 	padding: 10px 10px 10px 20px;
 	margin: 5px 5px 5px 5px;
@@ -341,7 +341,7 @@ li {
 
 .art-link {
 	text-decoration: none;
-	color: #008080;
+	color: #ce2c2c;
 }
 
 .art-link:visited{
@@ -374,7 +374,7 @@ li {
 /* FOOTER */
 
 .primary-footer {
-	background: #DF3013;
+	background: #47ba18;
 	width: 100%;
 	padding: 20px 0 20px 0;
 	clear: both;
@@ -431,19 +431,19 @@ li {
 }
 
 .reg-btn {
-	border: 1px solid #008080;
+	border: 1px solid #ce2c2c;
 	margin-left: 10px;
 	border-radius: 5px;
 	font-size: 18px;
-	background: #008080;
+	background: #ce2c2c;
 	color: #fff;
 	text-transform: uppercase;
 	padding: 11px 11px;
 }
 
 .reg-btn:hover{
-	background: #DF3013;
-	border: 1px solid #DF3013;
+	background: #47ba18;
+	border: 1px solid #47ba18;
 }
 
 .login-group  input,
@@ -548,7 +548,7 @@ li {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 20px;
-	color: #008080;
+	color: #ce2c2c;
 }
 
 .list-account li{
@@ -571,7 +571,7 @@ li {
 	padding: 8px;
 	border-radius: 5px;
 	border: 1px solid #c6c9cc;
-	background: #008080;
+	background: #ce2c2c;
 	color: #fff;
 	
 	font-size: 16px;
@@ -584,8 +584,8 @@ li {
 }
 
 .del-btn:hover, .gen-btn:hover{
-	background: #DF3013;
-	border: 1px solid #DF3013;
+	background: #47ba18;
+	border: 1px solid #47ba18;
 }
 
 #civic{
