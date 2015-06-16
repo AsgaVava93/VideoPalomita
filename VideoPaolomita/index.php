@@ -3,8 +3,7 @@
 <?php
     
 	include('php/config.php');
-	include('php/Computer.php');
-	include('php/Monitor_class.php');
+	include('php/Pelicula.php');
 	include('php/Usuario.php');
 
 	if(isset($_GET['page'])){
