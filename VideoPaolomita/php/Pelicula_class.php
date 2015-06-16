@@ -6,74 +6,71 @@
     class Pelicula {
         private $titulo;         // name
         private $sinopsis;       // sign
-	private $actores;		// pollici
+	private $actores;		// actores
         private $director;   // 800*600
         private $duracion;       // 16:9
         private $anio;          // si/no boolean
         private $genero;  // si/no boolean
-        private $protagonista;          // codice
+        private $protagonista;          // codice7
+        private $precio;
+        private $foto;
+        private $code;
 
         
-        public function __construct($marca, $modello, $pollici, $risoluzione, $formato, $treD, $altoparlanti, $num, $price, $photo, $description, $code) {
-            $this->marca = $marca;
-            $this->modello = $modello;
-			$this->pollici = $pollici;
-            $this->risoluzione= $risoluzione;
-			$this->formato = $formato;
-            $this->treD = $treD;
-            $this->altoparlanti = $altoparlanti;
-			$this->num = $num;
-			$this->price = $price;
-			$this->photo = $photo;
-			$this->description = $description;
+        public function __construct($titulo, $sinopsis, $actores, $director, $duracion, $anio, $genero, $protagonista, $precio, $foto, $code) {
+            $this->titulo = $titulo;
+            $this->sinopsis = $sinopsis;
+            $this->actores = $actores;
+            $this->director= $director;
+            $this->duracion = $duracion;
+            $this->anio = $anio;
+            $this->genero = $genero;
+            $this->protagonista = $protagonista;
+            $this->precio = $precio;
+            $this->foto = $foto;
             $this->code = $code;
         }
         
-        public function getMarca(){
-            return $this->marca;
+        public function getTitulo(){
+            return $this->titulo;
         }
         
-        public function getModello(){
-            return $this->modello;
+        public function getSinopsis(){
+            return $this->sinopsis;
         }
 		
-        public function getPollici(){
-            return $this->pollici;
+        public function getActores(){
+            return $this->actores;
         }		
         
-        public function getRisoluzione(){
-            return $this->risoluzione;
+        public function getDirector(){
+            return $this->director;
         }
 		
-		public function getFormato(){
-            return $this->formato;
+		public function getDuracion(){
+            return $this->duracion;
         }
         
-        public function getTreD(){
-            return $this->treD;
+        public function getAnio(){
+            return $this->anio;
         }
         
-        public function getAltoparlanti(){
-            return $this->altoparlanti;
+        public function getGenero(){
+            return $this->genero;
         }
 		
-		public function getNum(){
-			return $this->num;
-		}
+	public function getProtagonista(){
+		return $this->protagonista;
+	}
         
-        public function getPrice(){
-            return $this->price;
+        public function getPrecio(){
+            return $this->precio;
         }
         
-		public function getPhoto(){
-            return $this->photo;
-        }
-        
-        public function getDescription(){
-            return $this->description;
-        }
-
-        public function getCode(){
+	public function getFoto(){
+            return $this->foto;
+        }		
+	public function getCode(){
             return $this->code;
         }		
     }
