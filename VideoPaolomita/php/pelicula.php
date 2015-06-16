@@ -18,19 +18,15 @@
 1		    			--><div class='name-article'>
 		    				<h3><nobr><a class='art-link' href='index.php?page=monitor&art=<?php echo"{$list[$i]->getCode()}";?>' alt='<?php echo "{$list[$i]->getMarca()} {$list[$i]->getModelo()}";?>'><?php echo "{$list[$i]->getMarca()} {$list[$i]->getModelo()}";?></a></nobr></h3> <!-- marca e modelo-->
 		    				<p> Cod. <?php echo "{$list[$i]->getCode()}"; ?>
-		    			<?php	if ($list[$i]->getNum() > 0){
-		    					echo " - <font color='#99f614'><nobr>DISPONIBILE</nobr></font></p>";
-		    				}
-		    				else
-		    					echo " - <font color='#ff3636'><nobr>NON DISPONIBILE</nobr></font></p>"; ?>
+		    			
 		    	<!--	echo "-->
 		    				</p> <!-- codice -->
 		    			</div><!--
 		    			--><div class='box-price-article'>
 		    				<!-- prezzo -->
-		    				<h4 class='price-article'><?php echo "{$list[$i]->getPrice()}";?>&#8364;</h4> <!-- prezzo -->
+		    				<h4 class='price-article'><?php echo "{$list[$i]->getPrecio()}";?>&#8364;</h4> <!-- prezzo -->
 		    				<!-- cart image -->
-		    				<img class='cart-image' src='assets/images/cart.jpg' alt='Aggiungi al carrello'>
+		    				<img class='cart-image' src='assets/images/cart.jpg' alt='Agrega al carro'>
 		    			</div>
 		    		</div>
 		    	<?php	$i++;		        	
