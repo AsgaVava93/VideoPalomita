@@ -1,8 +1,5 @@
 <?php
-    /* 
-        Classe que define una peli en sus caracteristicas
-    */
-    
+
     class Pelicula {
         private $titulo;         // name
         private $sinopsis;       // sign

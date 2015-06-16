@@ -1,40 +1,16 @@
 <?php
 	
-	//include('Computer.php');
-	
+	include('php/Pelicula.php');
+        
 	$list = array();
 
-	switch($sc){
-		case 'desk': 
-			$query = "SELECT * FROM computer WHERE monitor=0 ORDER BY code ASC";
-			$result = $mysqli->query($query);
-			$type = 'pc';
-			while($row = $result->fetch_row())
-				$list[] = new Computer ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13]);
-			break;
-		case 'note': 
-			$query = "SELECT * FROM computer WHERE monitor>14 ORDER BY code ASC";
-			$result = $mysqli->query($query);		        
-			$type = 'pc';
-			while($row = $result->fetch_row())
-				$list[] = new Computer ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13]);		
-			break;
-		case 'net': 
-			$query = "SELECT * FROM computer WHERE monitor>0 AND monitor<14 ORDER BY code ASC";
-			$result = $mysqli->query($query);        
-			$type = 'pc';
-			while($row = $result->fetch_row())
-				$list[] = new Computer ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13]);		
-			break;
-		case 'mon': 
-			$query = "SELECT * FROM monitor ORDER BY code ASC";
-			$result = $mysqli->query($query);
-			$type = 'mon';
-			while($row = $result->fetch_row())
-				$list[] = new Monitor ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11]);			
-	}
-		$i=0;
-		while($i < count($list)){
+	$query = "SELECT * FROM pelicula";
+	$result = $mysqli->query($query);
+	while($row = $result->fetch_row())
+	$list[] = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
+		
+	$i=0;
+	while($i < count($list)){
 		        
 	?>
 		        
@@ -65,7 +41,7 @@
 									}
 								}	
 								else 
-									?><img class='cart-image' src='assets/images/cart.jpg' alt='Añades al carro'></a>
+									?><img class='cart-image' src='assets/images/cart.jpg' alt='Aï¿½ades al carro'></a>
 		    			</div>
 		    		</div>
 		    	<?php	$i++;		        	
