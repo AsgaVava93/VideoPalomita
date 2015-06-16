@@ -130,10 +130,9 @@
                                                 <tr>
 							<td><b>Foto</b></td>
 							
+                                                        
 						</tr>
-                                                <img class='image-article' src='<?php echo "{$var->getFoto()}"; ?>' alt='art1'>
-                                              
-						<img class= 'image-article' src='<?php echo "{$var->getFoto()}"; ?>' >
+                                               
 						
 					</tbody>
 				</table>
