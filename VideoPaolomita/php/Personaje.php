@@ -32,61 +32,60 @@
             $this->code = $code;
         }
         function getNombre() {
-            return $this->nombre;
-        }
-
-        function getApellido() {
-            return $this->apellido;
-        }
-
-        function getLugarNacimiento() {
-            return $this->lugarNacimiento;
-        }
-
-        function getFechaNacimiento() {
-            return $this->fechaNacimiento;
-        }
-
-        function getLugarMuerte() {
-            return $this->lugarMuerte;
-        }
-
-        function getFechaMuerte() {
-            return $this->fechaMuerte;
-        }
-
-        function getGeneroPelicula() {
-            return $this->generoPelicula;
-        }
-
-        function getBiografia() {
-            return $this->biografia;
-        }
-
-        function getOscar() {
-            return $this->oscar;
-        }
-
-        function getFoto() {
-            return $this->foto;
-        }
-
-        function getEs_actor() {
-            return $this->es_actor;
-        }
-
-        function getPareja() {
-            return $this->pareja;
-        }
-
-        function getEs_director() {
-            return $this->es_director;
-        }
-
-        function getCode() {
-            return $this->code;
-        }
-
-
+        return $this->nombre;
     }
+
+    function getApellido() {
+        return $this->apellido;
+    }
+
+    function getLugarNacimiento() {
+        return $this->lugarNacimiento;
+    }
+
+    function getFechaNacimiento() {
+        return $this->fechaNacimiento;
+    }
+
+    function getLugarMuerte() {
+        return $this->lugarMuerte;
+    }
+
+    function getFechaMuerte() {
+        return $this->fechaMuerte;
+    }
+
+    function getGeneroPelicula() {
+        return $this->generoPelicula;
+    }
+
+    function getBiografia() {
+        return $this->biografia;
+    }
+
+    function getOscar() {
+        return $this->oscar;
+    }
+
+    function getFoto() {
+        return $this->foto;
+    }
+
+    function getEs_actor() {
+        return $this->es_actor;
+    }
+
+    function getPareja() {
+        return $this->pareja;
+    }
+
+    function getEs_director() {
+        return $this->es_director;
+    }
+
+    function getCode() {
+        return $this->code;
+    }
+
+}
 ?>

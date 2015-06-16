@@ -58,27 +58,30 @@ while ($i < count($list)) {
                 <!-- prezzo -->
                 <h4 class='price-article'><?php echo "{$list[$i]->getPrecio()}"; ?>&#8364;</h4> <!-- prezzo -->
                 <!-- cart image -->
-        <?php
-        if (isset($_SESSION['username'])) {
-            ?> <a href='?page=opcart&type=<?php echo"{$type}"; ?>&sc=add&code=<?php echo "{$list[$i]->getCode()}"; ?>'> <?php } else {
-            ?>
+                <?php
+                if (isset($_SESSION['username'])) {
+                    ?> <a href='?page=opcart&type=<?php echo"{$type}"; ?>&sc=add&code=<?php echo "{$list[$i]->getCode()}"; ?>'> <?php } else {
+                    ?>
                         <a href='?page=err&code=1'> <?php
-                }
-                ?><img class='cart-image' src='assets/images/cart.jpg' alt='A�ades al carro'></a>
+                        }
+                        ?><img class='cart-image' src='assets/images/cart.jpg' alt='A�ades al carro'></a>
             </div>
         </div>
-                        <?php $i++;
-                    } else {
-                        ?>
+        <?php
+        $i++;
+    } else {
+        ?>
         <div class='box-article box-art-w'>
             <div class='box-image-article'>
                 <img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getNombre()} {$list[$i]->getApellido()}"; ?>'>
                 <div class='name-article'>
                     <h3><nobr><a class='art-link' href='index.php?page=list&sc=<?php echo"{$sc}"; ?>&art=<?php echo"{$list[$i]->getCode()}"; ?>' alt='<?php echo "{$list[$i]->getNombre()} {$list[$i]->getApellido()}"; ?>'><?php echo "{$list[$i]->getNombre()} {$list[$i]->getApellido()}"; ?></a></nobr></h3>
-                <p> <?php echo "{$list[$i]->getFechaNacimiento()}"; -  "{$list[$i]->getFechaMuerte()}"; ?>
+                    <p> <?php echo "{$list[$i]->getFechaNacimiento()}"; ?>
+                        ->
+        <?php echo "{$list[$i]->getFechaMuerte()}"; ?>
 
-                    <!--	echo "-->
-                </p></div>
+                        <!--	echo "-->
+                    </p></div>
             </div>
         </div>
         <?php
