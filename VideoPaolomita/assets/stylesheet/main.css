@@ -316,6 +316,12 @@ li {
 	vertical-align: top;
 }
 
+.fecha{
+    padding: 15px 15px 5px 20px;
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+}
 .name-article h3{
 	text-transform: uppercase;
 	text-align: left;

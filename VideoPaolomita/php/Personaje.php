@@ -15,7 +15,7 @@
         private $es_director;
         private $code;
         
-        function __construct($nombre, $apellido, $lugarNacimiento, $fechaNacimiento, $lugarMuerte, $fechaMuerte, $generoPelicula, $biografia, $oscar, $foto, $pareja, $es_actor, $es_director, $code) {
+        public function __construct($nombre, $apellido, $lugarNacimiento, $fechaNacimiento, $lugarMuerte, $fechaMuerte, $generoPelicula, $biografia, $oscar, $foto, $pareja, $es_actor, $es_director, $code) {
             $this->nombre = $nombre;
             $this->apellido = $apellido;
             $this->lugarNacimiento = $lugarNacimiento;
@@ -31,59 +31,60 @@
             $this->es_director = $es_director;
             $this->code = $code;
         }
-        function getNombre() {
+        
+        public function getNombre() {
         return $this->nombre;
     }
 
-    function getApellido() {
+    public function getApellido() {
         return $this->apellido;
     }
 
-    function getLugarNacimiento() {
+    public function getLugarNacimiento() {
         return $this->lugarNacimiento;
     }
 
-    function getFechaNacimiento() {
+    public function getFechaNacimiento() {
         return $this->fechaNacimiento;
     }
 
-    function getLugarMuerte() {
+    public function getLugarMuerte() {
         return $this->lugarMuerte;
     }
 
-    function getFechaMuerte() {
+    public function getFechaMuerte() {
         return $this->fechaMuerte;
     }
 
-    function getGeneroPelicula() {
+    public function getGeneroPelicula() {
         return $this->generoPelicula;
     }
 
-    function getBiografia() {
+    public function getBiografia() {
         return $this->biografia;
     }
 
-    function getOscar() {
+    public function getOscar() {
         return $this->oscar;
     }
 
-    function getFoto() {
+    public function getFoto() {
         return $this->foto;
     }
 
-    function getEs_actor() {
+    public function getEs_actor() {
         return $this->es_actor;
     }
 
-    function getPareja() {
+    public function getPareja() {
         return $this->pareja;
     }
 
-    function getEs_director() {
+    public function getEs_director() {
         return $this->es_director;
     }
 
-    function getCode() {
+    public function getCode() {
         return $this->code;
     }
 

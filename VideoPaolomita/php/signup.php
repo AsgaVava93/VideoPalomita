@@ -2,7 +2,7 @@
 	if(!isset($_SESSION['username']) && !isset($_SESSION['admin'])) {
 	?>
 		<div class='titolo'>
-			<h2><b>Pagina di registro</b></h2>
+			<h2><b>Pagina de registro</b></h2>
 		</div>
 	<?php
 	}

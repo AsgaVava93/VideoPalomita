@@ -26,9 +26,9 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
         --><div class="cart-article"><!-- contenitore immagine carrello -->
     
         </div>
-    </div><!--
-
-    --><div class='row bott'>
+    </div>
+    
+    <div class='row bott'>
     <?php echo "{$var->getSinopsis()}" ?>
            <div>	
     
@@ -85,39 +85,31 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
         <h1><?php echo "{$var->getNombre()} {$var->getApellido()}"; ?></h1>
     </div>
 
-    <div> <!-- foto e info principali -->
-        <div class="photo-article"> <!-- foto dell'articolo -->
-            <img class="img-art" src="<?php echo"{$var->getFoto()}" ?>" alt="<?php echo "{$var->getNobre()} {$var->getApellido()}"; ?>">
+    <div> 
+        
+        <div class="photo-article">
+            <img class="img-art" src="<?php echo"{$var->getFoto()}" ?>">
         </div>
     </div>
-    
-    
-    <div>
 
-        <div class='table-caratt'>
-
+    <div class='row bott'>
+        <div>
                 <table class="art-tab">
-                    <tbody>
                         <tr>
                             <td><b>Lugar y Fecha de Nacimiento</b></td>
-                            <td><?php echo "{$var->getLugarNacimiento()}" ?></td>, 
-                            <td><?php echo "{$var->getFechaNacimiento()}" ?></td>
+                            <td class='lf'><?php echo "{$var->getLugarNacimiento()}" ?>, 
+                            <?php echo "{$var->getFechaNacimiento()}" ?></td>
                         </tr>
                         <tr>
                             <td><b>Lugar y Fecha de Muerte</b></td>
-                            <td><?php echo "{$var->getLugarMuerte()}" ?></td>, 
-                            <td><?php echo "{$var->getFechaMuerte()}" ?></td>
+                            <td class='lf'><?php echo "{$var->getLugarMuerte()}" ?>, 
+                            <?php echo "{$var->getFechaMuerte()}" ?></td>
                         </tr>
                         <tr>
                             <td><b>Biografia</b></td>
                             <td class='lf'><?php echo "{$var->getBiografia()}" ?></td>
                         </tr>
-
-                    </tbody>
-                </table>
-
-                <table class="art-tab">
-                    <tbody>   
+                
                         <tr>
                             <td><b>Genero</b></td>
                             <td class='lf'><?php echo "{$var->getGeneroPelicula()}" ?></td>
@@ -131,15 +123,6 @@ if ($sc == 'peliculas' || $sc == 'nuevas') {
                             <td class='lf'><?php echo "{$var->getPareja()}" ?></td>
                         </tr>
 
-                        <tr>
-                            <td><b>Foto</b></td>
-
-                        </tr>
-                    <img class='image-article' src='<?php echo "{$var->getFoto()}"; ?>' alt='art1'>
-
-                    <img class= 'image-article' src='<?php echo "{$var->getFoto()}"; ?>' >
-
-                    </tbody>
                 </table>
             </div>
             </div>

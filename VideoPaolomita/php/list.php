@@ -74,9 +74,9 @@ while ($i < count($list)) {
         <div class='box-article box-art-w'>
             <div class='box-image-article'>
                 <img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getNombre()} {$list[$i]->getApellido()}"; ?>'>
-                <div class='name-article'>
+                <div class='fecha'>
                     <h3><nobr><a class='art-link' href='index.php?page=list&sc=<?php echo"{$sc}"; ?>&art=<?php echo"{$list[$i]->getCode()}"; ?>' alt='<?php echo "{$list[$i]->getNombre()} {$list[$i]->getApellido()}"; ?>'><?php echo "{$list[$i]->getNombre()} {$list[$i]->getApellido()}"; ?></a></nobr></h3>
-                    <p> <?php echo "{$list[$i]->getFechaNacimiento()}"; ?>
+                    <p><?php echo "{$list[$i]->getFechaNacimiento()}"; ?>
                         ->
         <?php echo "{$list[$i]->getFechaMuerte()}"; ?>
 
