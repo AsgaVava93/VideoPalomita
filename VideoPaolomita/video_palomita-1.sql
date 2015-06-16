@@ -25,11 +25,11 @@ USE `video_palomita`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `actores`
+-- Estructura de tabla para la tabla `personaje`
 --
 
-DROP TABLE IF EXISTS `actores`;
-CREATE TABLE IF NOT EXISTS `actores` (
+DROP TABLE IF EXISTS `personaje`;
+CREATE TABLE IF NOT EXISTS `personaje` (
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
   `lugarNacimiento` varchar(50) NOT NULL,
@@ -56,7 +56,7 @@ DROP TABLE IF EXISTS `pelicula`;
 CREATE TABLE IF NOT EXISTS `pelicula` (
   `titulo` varchar(50) NOT NULL,
   `sinopsis` text NOT NULL,
-  `actores` text NOT NULL,
+  `personaje` text NOT NULL,
   `director` varchar(50) NOT NULL,
   `duracion` varchar(20) NOT NULL,
   `anio` int(4) NOT NULL,
@@ -96,9 +96,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 
 --
--- Indices de la tabla `actores`
+-- Indices de la tabla `personaje`
 --
-ALTER TABLE `actores`
+ALTER TABLE `personaje`
   ADD PRIMARY KEY (`code`);
 
 --
@@ -118,9 +118,9 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `actores`
+-- AUTO_INCREMENT de la tabla `personaje`
 --
-ALTER TABLE `actores`
+ALTER TABLE `personaje`
   MODIFY `code` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `pelicula`
