@@ -10,11 +10,12 @@
         private $biografia;          // codice7
         private $oscar;
         private $foto;
+        private $pareja;
         private $es_actor;
         private $es_director;
         private $code;
         
-        function __construct($nombre, $apellido, $lugarNacimiento, $fechaNacimiento, $lugarMuerte, $fechaMuerte, $generoPelicula, $biografia, $oscar, $foto, $es_actor, $es_director, $code) {
+        function __construct($nombre, $apellido, $lugarNacimiento, $fechaNacimiento, $lugarMuerte, $fechaMuerte, $generoPelicula, $biografia, $oscar, $foto, $pareja, $es_actor, $es_director, $code) {
             $this->nombre = $nombre;
             $this->apellido = $apellido;
             $this->lugarNacimiento = $lugarNacimiento;
@@ -25,6 +26,7 @@
             $this->biografia = $biografia;
             $this->oscar = $oscar;
             $this->foto = $foto;
+            $this->pareja = $pareja;
             $this->es_actor = $es_actor;
             $this->es_director = $es_director;
             $this->code = $code;
@@ -71,6 +73,10 @@
 
         function getEs_actor() {
             return $this->es_actor;
+        }
+
+        function getPareja() {
+            return $this->pareja;
         }
 
         function getEs_director() {

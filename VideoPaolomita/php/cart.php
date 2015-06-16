@@ -110,10 +110,10 @@ else {
 
 			<div class='box-article cart-art-box'>
 							<div class='box-image-article'>
-								<img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getTitulo()} {$list[$i]->getSinopsis()}";?>'>
+								<img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getTitulo()}";?>'>
 							</div><!--
 							--><div class='name-article'>
-								<h3><nobr><a class='art-link' href='index.php?page=list&&art=<?php echo"{$list[$i]->getCode()}";?>' alt='<?php echo "{$list[$i]->getTitulo()} {$list[$i]->getSinopsis()}";?>'><?php echo "{$list[$i]->getTitulo()} {$list[$i]->getSinopsis()}";?></a></nobr></h3> <!-- marca e modello-->
+								<h3><nobr><a class='art-link' href='index.php?page=list&&art=<?php echo"{$list[$i]->getCode()}";?>' alt='<?php echo "{$list[$i]->getTitulo()}";?>'><?php echo "{$list[$i]->getTitulo()}";?></a></nobr></h3> <!-- marca e modello-->
 								<p><nobr> Cod. <?php echo "{$list[$i]->getCode()}"; ?>
 							
 					<!--	echo ""-->
