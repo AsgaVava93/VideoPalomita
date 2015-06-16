@@ -150,5 +150,80 @@ if (isset($_POST['compra'])) {
         echo "Por comprar tienes que registrarte en VideoPalomita.es!!";
     }
 }
-$mysqli->close();
+
+else {
+?>
+	<div class='titolo'><h2><b>Carro</b></h2></div>
+	
+
+	<?php
+		$total = 0;
+		$list = array();
+		if(isset($_SESSION['userid'])){
+			$userid = $_SESSION['userid'];
+		$query = "SELECT * FROM pelicula INNER JOIN cart WHERE cart.id_usuario = '$userid' AND cart.id_pelicula = pelicula.code";
+		$result = $mysqli->query($query);
+		$nopeli = 0;
+		
+		if($result->num_rows > 0){ //se ci sono pelicula li visualizzo
+			
+			while($row = $result->fetch_row())
+				$list[] = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
+
+			$i = 0;
+			?> <div class='div-cart'> <?php
+
+			while($i < count($list)){
+			?>
+
+			<div class='box-article cart-art-box'>
+							<div class='box-image-article'>
+								<img class='image-article' src='<?php echo "{$list[$i]->getFoto()}"; ?>' alt='<?php echo "{$list[$i]->getTitulo()}";?>'>
+							</div><!--
+							--><div class='name-article'>
+								<h3><nobr><a class='art-link' href='index.php?page=list&&art=<?php echo"{$list[$i]->getCode()}";?>' alt='<?php echo "{$list[$i]->getTitulo()}";?>'><?php echo "{$list[$i]->getTitulo()}";?></a></nobr></h3> <!-- marca e modello-->
+								<p><nobr> Cod. <?php echo "{$list[$i]->getCode()}"; ?>
+							
+					<!--	echo ""-->
+								</p> <!-- codice -->
+							</div><!--
+							--><div class='box-price-article'>
+								<!-- prezzo -->
+								<h4 class='price-article'><?php echo "{$list[$i]->getPrecio()}"; $total = $total + ($list[$i]->getPrecio());?>&#8364;</h4> <!-- prezzo -->
+								
+																
+								<a href='?page=opcart&type=pc&sc=del&code=<?php echo "{$list[$i]->getCode()}"; ?>'><img class='img-dlt' src='assets/images/ics.jpg' alt="Riduci di un'unità la quantità"></a>
+							</div>
+						</div>
+					<?php	$i++;		        	
+			} 
+		}else{
+			$nopeli = 1;
+		}
+			
+		?>	
+                <?php		        	
+			 			
+		
+			if($nopeli)
+				echo " el carro esta vacio<br><br>";
+		
+	
+		if(!$nopeli){ ?>
+			<b><h4 class='price-total'><br>Total: <?php echo "{$total}"; ?>&#8364;</h4></b>
+			</div>
+
+			<form class='move-left' action='#' method='POST'>
+				<label class='money-input'>
+					Inserta tu sueldo <input type='number' step='any' name='money' placeholder='<?php echo "{$total}"; ?>' value='<?php echo "{$total}"; ?>'>
+				</label>
+				<input id='bottone' class='reg-btn acq-btn' type="submit" name="compra" value="Adelante con la compra">
+				<?php $_SESSION['total'] = $total; ?>
+			</form>
+<?php
+		}
+	}
+	else { echo "Por comprar tienes que registrarte en VideoPalomita.es!!"; }
+}
+	$mysqli->close();
 ?>
