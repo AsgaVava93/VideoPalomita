@@ -122,6 +122,49 @@
                                 <img class='image-article' src='<?php echo "{$var->getFoto()}"; ?>' alt='art1'>
                                               
 				<img class= 'image-article' src='<?php echo "{$var->getFoto()}"; ?>' >
+=======
+		else { 	    	  //caratteristiche pelicula ?>
+				<table class="art-tab">
+					<tbody>
+						<tr>
+							<td><b>Titulo</b></td>
+							<td class='lf'><?php echo "{$var->getTitulo()}" ?></td>
+						</tr>
+						<tr>
+							<td><b>Director</b></td>
+							<td class='lf'><?php echo "{$var->getDirector()}" ?></td>
+						</tr>
+						<tr>
+							<td><b>Actores</b></td>
+							<td class='lf'><?php echo "{$var->getActores()}" ?></td>
+						</tr>	
+                                                <tr>
+							<td><b>duracion</b></td>
+							<td class='lf'><?php echo "{$var->getDuracion()}" ?></td>
+						</tr>	
+                                                <tr>
+							<td><b>Año</b></td>
+							<td class='lf'><?php echo "{$var->getAnio()}" ?></td>
+						</tr>
+                                                <tr>
+							<td><b>Genero</b></td>
+							<td class='lf'><?php echo "{$var->getGenero()}" ?></td>
+						</tr>
+                                                <tr>
+							<td><b>Protagonista</b></td>
+							<td class='lf'><?php echo "{$var->getProtagonista()}" ?></td>
+						</tr>
+                                                <tr>
+							<td><b>Precio</b></td>
+							<td class='lf'><?php echo "{$var->getPrecio()}" ?></td>
+						</tr>
+                                                <tr>
+							<td><b>Foto</b></td>
+							
+                                                        
+						</tr>
+                                               
+>>>>>>> origin/master
 						
                 	</tbody>
 		</table>
