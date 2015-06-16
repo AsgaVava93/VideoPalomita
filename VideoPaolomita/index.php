@@ -5,7 +5,7 @@
 	include('php/config.php');
 	include('php/Computer.php');
 	include('php/Monitor_class.php');
-	include('php/Utente.php');
+	include('php/Usuario.php');
 
 	if(isset($_GET['page'])){
 		$pg = $_GET['page'];
