@@ -1,21 +1,17 @@
 <?php
     /* 
-        Classe che definisce un monitor nelle sue caratteristiche
+        Classe que define una peli en sus caracteristicas
     */
     
     class Monitor {
-        private $marca;         // name
-        private $modello;       // sign
-		private $pollici;		// pollici
-        private $risoluzione;   // 800*600
-        private $formato;       // 16:9
-        private $treD;          // si/no boolean
-        private $altoparlanti;  // si/no boolean
-		private $num;			// numero articoli disponibili
-		private $price;			// prezzo
-		private $photo;			// path percorso
-		private $description;	// descrizione articolo
-        private $code;          // codice
+        private $titulo;         // name
+        private $sinopsis;       // sign
+	private $actores;		// pollici
+        private $director;   // 800*600
+        private $duracion;       // 16:9
+        private $anio;          // si/no boolean
+        private $genero;  // si/no boolean
+        private $protagonista;          // codice
 
         
         public function __construct($marca, $modello, $pollici, $risoluzione, $formato, $treD, $altoparlanti, $num, $price, $photo, $description, $code) {
