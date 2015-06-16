@@ -2,7 +2,7 @@
 	if(!isset($_SESSION['username']) && !isset($_SESSION['admin'])) {
 	?>
 		<div class='titolo'>
-			<h2><b>Pagina di registracion</b></h2>
+			<h2><b>Pagina di registro</b></h2>
 		</div>
 	<?php
 	}
@@ -24,14 +24,14 @@
 
 			<br>
 			<label>
-				Data Nascita
+				Fecha de Nacimiento
 				<input type="date" name="dataNascita" title="Inserta tu fecha de nacimiento" required>
 			</label>
 
 			<label>
 				Sexo
 				<select name="sexo" title="Seleziona tu sexo" required>
-					<option value="" selected>Scegli</option>
+					<option value="" selected>Eliges</option>
 					<option value="m">M</option>
 				<option value="f">F</option>
 				</select>
@@ -50,8 +50,8 @@
 
 			<br>
 			<label>
-				CAP
-				<input type="text" name="cap" placeholder="CAP" pattern="^[0-9]{5}" maxlength='5' title="El CAP esta formado desde 5 digitos" required> <!-- Il pattern vuole solo 5 numeri -->
+				Codigo Postal
+				<input type="text" name="cap" placeholder="Codigo Postal" pattern="^[0-9]{5}" maxlength='5' title="El Codigo Postal esta formado desde 5 digitos" required> <!-- Il pattern vuole solo 5 numeri -->
 			</label>	
 						
 			<label> 
@@ -84,7 +84,7 @@
 			<br>
 			<?php if(!($_GET['page'] == 'account')) { ?>
 			<label>
-				<input type="checkbox" name="privacy" value="privacy" required> He leido y acepto la informativa sobre la privacy
+				<input type="checkbox" name="privacy" value="privacy" required> He leido y acepto la informacion sobre la privacy
 			</label>
 			<?php } ?>
 		</fieldset>
