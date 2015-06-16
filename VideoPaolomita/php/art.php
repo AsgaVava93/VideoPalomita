@@ -39,22 +39,12 @@
 		
 		--><div class="cart-article"><!-- contenitore immagine carrello -->
 		<?php
-			if($var->getNum() > 0){
-				if(isset($_SESSION['username'])) {
-					?> <a href='?page=opcart&type=<?php echo "$aux"; ?>&sc=add&code=<?php echo "{$var->getCode()}"; ?>'> <?php
-				}
-				else{ 
-					?><a href='?page=err&code=1'><?php
-				}
-				?> <img class='cart-art-image' src='assets/images/cart.jpg' alt='A�ades al carro'></a> <?php
-			} else {
-				?><img class='cart-art-image' src='assets/images/cart.jpg' alt='A�ades al carro'><?php
-			} ?>
+			 ?>
 		</div>
 	</div><!--
 	
 	--><div class='row bott'>
-		<?php echo "{$var->getDescription()}" ?>
+		<?php echo "{$var->getSinopsis()}" ?>
 	</div><!--
 	--><div class='table-caratt'>
 		<div>	
@@ -114,41 +104,37 @@
 							<td class='lf'><?php echo "{$var->getDirector()}" ?></td>
 						</tr>
 						<tr>
-							<td><b>Sistema Operativo</b></td>
-							<td class='lf'><?php echo "{$var->getOs()}" ?></td>
-						</tr>							
-						<?php if($var->getMonitor()) { ?>
-						<tr>
-							<td><b>Monitor</b></td>
-							<td class='lf'><?php echo "{$var->getMonitor()}''" ?></td>
-						</tr> <?php } ?>
-						<tr>
-							<td><b>CPU</b></td>
-							<td class='lf'><?php echo "{$var->getCPU()}" ?></td>
+							<td><b>Actores</b></td>
+							<td class='lf'><?php echo "{$var->getActores()}" ?></td>
+						</tr>	
+                                                <tr>
+							<td><b>duracion</b></td>
+							<td class='lf'><?php echo "{$var->getDuracion()}" ?></td>
+						</tr>	
+                                                <tr>
+							<td><b>Año</b></td>
+							<td class='lf'><?php echo "{$var->getAnio()}" ?></td>
 						</tr>
-						<tr>
-							<td><b>Scheda video</b></td>
-							<td class='lf'><?php echo "{$var->getVideo()}" ?></td>
+                                                <tr>
+							<td><b>Genero</b></td>
+							<td class='lf'><?php echo "{$var->getGenero()}" ?></td>
 						</tr>
-						<tr>
-							<td><b>Ram</b></td>
-							<td class='lf'><?php echo "{$var->getRam()} GB" ?></td>
+                                                <tr>
+							<td><b>Protagonista</b></td>
+							<td class='lf'><?php echo "{$var->getProtagonista()}" ?></td>
 						</tr>
-						<tr>
-							<td><b>Hard Disk</b></td>
-							<td class='lf'><?php echo "{$var->getHd()} GB" ?></td>
+                                                <tr>
+							<td><b>Precio</b></td>
+							<td class='lf'><?php echo "{$var->getPrecio()}" ?></td>
 						</tr>
-												<tr>
-							<td><b>Memory Card Reader</b></td>
-							<td class='lf'>
-							<?php 
-								if($var->getMemoryCard())  
-									echo "Si";
-								else
-									echo "No";
-							?>
-							</td>
+                                                <tr>
+							<td><b>Foto</b></td>
+							
 						</tr>
+                                                <img class='image-article' src='<?php echo "{$var->getFoto()}"; ?>' alt='art1'>
+                                              
+						<img class= 'image-article' src='<?php echo "{$var->getFoto()}"; ?>' >
+						
 					</tbody>
 				</table>
 		<?php }
