@@ -1,7 +1,7 @@
 <header class="primary-header container group">
 	<h1 class="logo"><a href="index.php?page=home">VideoPalomita</a></h1>
 	<nav class="header-nav">
-		<a href="index.php?page=who">Descripcion proyecto</a><!--
+		<!--
 		--><a href="index.php?page=where">Contactos</a><!--
 		--><?php
 			if(isset($_SESSION['username'])){

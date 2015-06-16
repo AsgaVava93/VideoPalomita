@@ -7,9 +7,6 @@ if(isset($pg)){
 			else
 				include('php/list.php');
 			break;
-		case 'who':
-			include('php/who.php');
-			break;
 		case 'account':
 			include('php/account.php');
 			break;

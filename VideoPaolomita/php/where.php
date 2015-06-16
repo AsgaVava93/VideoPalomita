@@ -18,12 +18,12 @@
 	<div class='contactos-container'>
 		<div class='contactos'>
 			<p><b>Valentina Sau</b><br>Calle Reina Zaida 2<br>24007 Leon<br><a href='mailto:valsau00@estudiantes.unileon.es'>valsau00@estudiantes.unileon.es</a></p>
-			<img src='assets/images/contacts/fibba.jpg' alt='Federico Ibba'>
+			<img src='assets/images/contacts/valentina.jpg' alt='Valentina Sau'>
 		</div><!--
 		
 		--><div class='contactos'>
 			<p class='left'><b>Rosario Cruz</b><br>Calle Felipe II, 8<br>24007 - Leon (ES)<br>Tel.: 749/1041651<br><a href='mailto:rcruze00@estudiantes.unileon.es'>rcruze00@estudiantes.unileon.es</a></p>
-			<img src='assets/images/contacts/rosario.jpg' alt='Federico Ibba'>
+			<img src='assets/images/contacts/rosario.jpg' alt='Rosario Cruz'>
 	</div>
        </div>
 </section>
