@@ -7,9 +7,8 @@
 //	if($type == 'pc'){
 		if($sc == 'add'){
 				$query = "INSERT INTO cart(id_pelicula, id_usuario) VALUES ($code, $userid)";
-                                echo $query;
 				if(!($mysqli->query($query)))
-					echo "Error en el insertar el articulo en el carro (add).<br><br>";
+					echo "Error en el insertar el articulo en el carro, puede que ya exista.<br><br>";
 				else{
 					//visualizzo gli articoli inseriti
 					header("refresh:0;url='?page=cart'" );
