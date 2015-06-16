@@ -4,21 +4,22 @@
 			
 <div> <!-- articolo-->
 	<?php				
-		$query = "SELECT * FROM computer WHERE code = 12";
+		$query = "SELECT * FROM pelicula WHERE code = 1";
 		$result = $mysqli->query($query);
+                
 		
 		while($row = $result->fetch_row())
-			$pc = new Computer ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13]);
+			$peli = new Pelicula ($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10]);
 
 	?>
 	<div class="photo-article"> <!-- foto dell'articolo -->
-		<img class="img-art" src="<?php echo "{$pc->getPhoto()}"; ?>
+		<img class="img-art" src="<?php echo "{$peli->getFoto()}"; ?>
 		" alt="foto">
 	</div><!--
 				
 	--><div class="description-article">
-		<h2><?php echo "{$pc->getMarca()} {$pc->getModello()}"; ?></h2>
-		<h3><?php echo "{$pc->getPrice()}"; ?> &#8364; </h3>
+		<h2><?php echo "{$peli->getTitulo()} {$peli->getSinopsis()}"; ?></h2>
+		<h3><?php echo "{$peli->getPrecio()}"; ?> &#8364; </h3>
 		<p> <br>Nuevo en los cinemas! <br></p>
 	</div>
 </div>
