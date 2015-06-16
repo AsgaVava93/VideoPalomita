@@ -159,7 +159,7 @@ cite, em {
 /* HEADER */
 
 .primary-header {
-	background: #DF3013;
+	background: #e5e186;
 	width: 100%;
 	height: 128px;
 	padding-left: 15px;
@@ -282,7 +282,7 @@ li {
 
 .box-article{
 	height: 120px;
-	border: 2px solid #DF3013;
+	border: 2px solid #e5e186;
 	border-radius: 5px;
 	padding: 10px 10px 10px 20px;
 	margin: 5px 5px 5px 5px;
@@ -374,7 +374,7 @@ li {
 /* FOOTER */
 
 .primary-footer {
-	background: #DF3013;
+	background: #e5e186;
 	width: 100%;
 	padding: 20px 0 20px 0;
 	clear: both;
@@ -442,8 +442,8 @@ li {
 }
 
 .reg-btn:hover{
-	background: #DF3013;
-	border: 1px solid #DF3013;
+	background: #e5e186;
+	border: 1px solid #e5e186;
 }
 
 .login-group  input,
@@ -584,8 +584,8 @@ li {
 }
 
 .del-btn:hover, .gen-btn:hover{
-	background: #DF3013;
-	border: 1px solid #DF3013;
+	background: #e5e186;
+	border: 1px solid #e5e186;
 }
 
 #civic{
