@@ -33,8 +33,8 @@
 	
 	<p><b>Es un sitio seguro?</b></p>
 	<p>
-	   Hasta ahora no hemos recebido quejas sobre la securidad de nuestros productos, asi que..  
-	   Satisfechos o rembolsados!
+	   Hasta ahora no hemos recibido quejas sobre la seguridad de nuestros productos, asi que..  
+	   Contentos o rembolsamos!
 	</p><br>
 
 </section>
